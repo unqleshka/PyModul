@@ -26,7 +26,7 @@ def expensive_purchases(d: list, min_price: float):
     for item in d:
         if item["price"] > min_price:
             exp_purchases.append(item)
-    print(f"Покупки дороже {min_price}: {exp_purchases}")
+    print(f"Покупки дороже {min_price}: ", *exp_purchases, sep = '\n    ')
 
 def average_price_by_category(d: list):
     dict_avg = dict()
@@ -55,4 +55,5 @@ total_revenue(purchases)
 items_by_category(purchases)
 expensive_purchases(purchases, 1)
 average_price_by_category(purchases)
+
 most_frequent_category(purchases)
